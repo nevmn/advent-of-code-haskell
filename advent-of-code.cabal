@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c1874b2bc7a30c8f956dc3cb7a5636f4356d9823706fc30a1888c9e1363ab30b
+-- hash: 69bcb0e7080251eb26bfca4a9e99fd6bad729411f739f3873af889ba7a3ef7e4
 
 name:           advent-of-code
 version:        0.1.0.0
@@ -26,13 +26,16 @@ library
       AOC.AOC2015.Day1
       AOC.AOC2015.Day2
       AOC.AOC2015.Day3
+      AOC.AOC2015.Day4
   other-modules:
       Paths_advent_of_code
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+    , bytestring
     , containers
+    , cryptonite
     , split
   default-language: Haskell2010
 
@@ -46,7 +49,9 @@ executable advent-of-code-exe
   build-depends:
       advent-of-code
     , base >=4.7 && <5
+    , bytestring
     , containers
+    , cryptonite
     , split
   default-language: Haskell2010
 
@@ -61,7 +66,9 @@ test-suite advent-of-code-test
   build-depends:
       advent-of-code
     , base >=4.7 && <5
+    , bytestring
     , containers
+    , cryptonite
     , hspec
     , split
   default-language: Haskell2010

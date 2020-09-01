@@ -3,6 +3,7 @@ module Main where
 import qualified AOC.AOC2015.Day1              as Day1
 import qualified AOC.AOC2015.Day2              as Day2
 import qualified AOC.AOC2015.Day3              as Day3
+import qualified AOC.AOC2015.Day4              as Day4
 
 main :: IO ()
 main = do
@@ -22,3 +23,6 @@ main = do
     let res1 = show $ Day3.part2 input
     putStrLn "Day3"
     putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2
+    putStrLn "Day4"
+    let res1 = show $ Day4.part1 "iwrupvqb"
+    putStrLn $ "part1: " ++ res1 

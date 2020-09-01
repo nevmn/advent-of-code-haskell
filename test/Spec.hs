@@ -2,6 +2,7 @@ import           Test.Hspec
 import qualified AOC.AOC2015.Day1              as Day1
 import qualified AOC.AOC2015.Day2              as Day2
 import qualified AOC.AOC2015.Day3              as Day3
+import qualified AOC.AOC2015.Day4              as Day4
 
 main :: IO ()
 main = hspec $ do
@@ -26,3 +27,6 @@ main = hspec $ do
         it "houses with presents with robot" $ do
 		    input <- readFile "./inputs/2015/Day3.txt"
 		    Day3.part2 input `shouldBe` 2360
+    describe "AOC.AOC2015.Day4" $ do
+        it "hash with 5 leading zeroes" $ do
+		    Day3.part1 "iwrupvqb" `shouldBe` 346386
