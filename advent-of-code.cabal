@@ -1,8 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.2.
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: c1874b2bc7a30c8f956dc3cb7a5636f4356d9823706fc30a1888c9e1363ab30b
 
 name:           advent-of-code
 version:        0.1.0.0
@@ -23,6 +25,7 @@ library
   exposed-modules:
       AOC.AOC2015.Day1
       AOC.AOC2015.Day2
+      AOC.AOC2015.Day3
   other-modules:
       Paths_advent_of_code
   hs-source-dirs:
