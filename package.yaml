@@ -1,0 +1,39 @@
+name:                advent-of-code
+version:             0.1.0.0
+github:              "nevmn/advent-of-code"
+license:             MIT
+author:              "Maxim Neverov"
+maintainer:          "nevmn21@gmail.com"
+copyright:           "2020 Maxim Neverov"
+
+description:         Advent of Code solutions
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+
+library:
+  source-dirs: src
+
+executables:
+  advent-of-code-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - advent-of-code
+
+tests:
+  advent-of-code-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - advent-of-code
+    - hspec
