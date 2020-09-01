@@ -2,26 +2,36 @@ module AOC.AOC2015.Day1 where
 
 import           Data.Maybe                     ( mapMaybe )
 
-part1 :: String -> Int
+data Direction = Up | Down
+type Floor = Int
+type Step = Int
+
+instance Enum Direction where
+    fromEnum Up   = 1
+    fromEnum Down = -1
+    toEnum 1    = Up
+    toEnum (-1) = Down
+
+part1 :: String -> Floor
 part1 = fst . last . floorWithStep . parseStr
 
-part2 :: String -> Int
+part2 :: String -> Step
 part2 =
     snd
         . head
-        . dropWhile (\(floor, number) -> floor /= -1)
+        . dropWhile (\(floor, _) -> floor /= -1)
         . floorWithStep
         . parseStr
 
-parseChar :: Char -> Maybe (Int -> Int)
-parseChar x | x == '('  = Just (\n -> n + 1)
-            | x == ')'  = Just (\n -> n - 1)
+parseChar :: Char -> Maybe Direction
+parseChar x | x == '('  = Just Up
+            | x == ')'  = Just Down
             | otherwise = Nothing
 
-parseStr :: String -> [Int -> Int]
+parseStr :: String -> [Direction]
 parseStr = mapMaybe parseChar
 
-floorWithStep :: [Int -> Int] -> [(Int, Int)]
-floorWithStep =
-    scanl (\(floor, number) direction -> (direction floor, succ number)) (0, 0)
-
+floorWithStep :: [Direction] -> [(Floor, Step)]
+floorWithStep = scanl
+    (\(floor, number) direction -> (fromEnum direction + floor, succ number))
+    (0, 0)
