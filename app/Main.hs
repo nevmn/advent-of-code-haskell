@@ -20,9 +20,10 @@ main = do
     putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2
     input <- readFile "./inputs/2015/Day3.txt"
     let res1 = show $ Day3.part1 input
-    let res1 = show $ Day3.part2 input
+    let res2 = show $ Day3.part2 input
     putStrLn "Day3"
     putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2
     putStrLn "Day4"
     let res1 = show $ Day4.part1 "iwrupvqb"
-    putStrLn $ "part1: " ++ res1 
+    let res2 = show $ Day4.part2 "iwrupvqb"
+    putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2

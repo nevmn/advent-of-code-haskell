@@ -29,4 +29,6 @@ main = hspec $ do
 		    Day3.part2 input `shouldBe` 2360
     describe "AOC.AOC2015.Day4" $ do
         it "hash with 5 leading zeroes" $ do
-		    Day3.part1 "iwrupvqb" `shouldBe` 346386
+		    Day4.part1 "iwrupvqb" `shouldBe` 346386
+        it "hash with 6 leading zeroes" $ do
+		    Day4.part2 "iwrupvqb" `shouldBe` 9958218
