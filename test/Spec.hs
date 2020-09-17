@@ -34,6 +34,9 @@ main = hspec $ do
         it "hash with 6 leading zeroes" $ do
             Day4.part2 "iwrupvqb" `shouldBe` 9958218
     describe "AOC.AOC2015.Day5" $ do
-        it "how strings is nice" $ do
+        it "how much strings is nice" $ do
             input <- readFile "./inputs/2015/Day5.txt"
             Day5.part1 (lines input) `shouldBe` 258
+        it "how much string is nice 2" $ do
+	    input <- readFile "./inputs/2015/Day5.txt"
+	    Day5.part2 (lines input) `shouldBe` 53
