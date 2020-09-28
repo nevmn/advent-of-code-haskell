@@ -5,6 +5,7 @@ import qualified AOC.AOC2015.Day2              as Day2
 import qualified AOC.AOC2015.Day3              as Day3
 import qualified AOC.AOC2015.Day4              as Day4
 import qualified AOC.AOC2015.Day5              as Day5
+import qualified AOC.AOC2015.Day6   as Day6
 
 main :: IO ()
 main = do
@@ -33,3 +34,6 @@ main = do
     let res2 = show $ Day5.part2 $ lines input
     putStrLn "Day5"
     putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2
+    input <- readFile "./inputs/2015/Day6.txt"
+    let (lit, bright) = Day6.solve $ lines input
+    putStrLn $ "part1: " ++ show lit ++ " part2: " ++ show bright

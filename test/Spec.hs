@@ -1,9 +1,11 @@
 import           Test.Hspec
+
 import qualified AOC.AOC2015.Day1              as Day1
 import qualified AOC.AOC2015.Day2              as Day2
 import qualified AOC.AOC2015.Day3              as Day3
 import qualified AOC.AOC2015.Day4              as Day4
 import qualified AOC.AOC2015.Day5              as Day5
+import qualified AOC.AOC2015.Day6              as Day6
 
 main :: IO ()
 main = hspec $ do
@@ -29,14 +31,22 @@ main = hspec $ do
             input <- readFile "./inputs/2015/Day3.txt"
             Day3.part2 input `shouldBe` 2360
     describe "AOC.AOC2015.Day4" $ do
-        it "hash with 5 leading zeroes" $ do
+        it "hash with 5 leading zeroes" $
             Day4.part1 "iwrupvqb" `shouldBe` 346386
-        it "hash with 6 leading zeroes" $ do
+        it "hash with 6 leading zeroes" $
             Day4.part2 "iwrupvqb" `shouldBe` 9958218
     describe "AOC.AOC2015.Day5" $ do
         it "how much strings is nice" $ do
             input <- readFile "./inputs/2015/Day5.txt"
             Day5.part1 (lines input) `shouldBe` 258
         it "how much string is nice 2" $ do
-	    input <- readFile "./inputs/2015/Day5.txt"
-	    Day5.part2 (lines input) `shouldBe` 53
+            input <- readFile "./inputs/2015/Day5.txt"
+            Day5.part2 (lines input) `shouldBe` 53
+    describe"AOC.AOC2015.Day6" $ do
+        it "how many lights are lit" $ do
+            input <- readFile"./inputs/2015/Day6.txt"
+            let result = Day6.solve (lines input)
+            fst result `shouldBe` 543903
+            snd result `shouldBe` 14687245
+            
+
