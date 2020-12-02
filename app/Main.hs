@@ -50,4 +50,5 @@ main = do
       putStrLn "Day2"
       input <- readFile "./inputs/2020/Day2.txt"
       let res1 = show $ AOC.AOC2020.Day2.part1 $ lines input
-      putStrLn $ "part1: " ++ res1
+      let res2 = show $ AOC.AOC2020.Day2.part2 $ lines input
+      putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2

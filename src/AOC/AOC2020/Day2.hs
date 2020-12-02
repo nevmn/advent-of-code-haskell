@@ -15,3 +15,12 @@ isNice :: ((Int, Int), (Char, String)) -> Bool
 isNice ((minimal, maximal), (letter, password)) = (letterCount <= maximal) && (letterCount >= minimal)
   where
     letterCount = length $ filter (== letter) password
+
+part2 :: [String] -> Int
+part2 = length . filter (== True) . map (isNice' . parseString)
+
+isNice' :: ((Int,Int), (Char, String)) -> Bool
+isNice' ((minimal, maximal), (letter, password)) = ((letter == firstPosLetter) && (letter /= secondPosLetter)) ||((letter /= firstPosLetter) && (letter == secondPosLetter))
+    where
+        firstPosLetter = password !! (minimal - 1)
+        secondPosLetter = password !! (maximal - 1)
