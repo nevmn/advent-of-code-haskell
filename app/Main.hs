@@ -8,6 +8,7 @@ import qualified AOC.AOC2015.Day5              as Day5
 import qualified AOC.AOC2015.Day6              as Day6
 
 import AOC.AOC2020.Day1
+import AOC.AOC2020.Day2
 
 main :: IO ()
 main = do
@@ -41,8 +42,12 @@ main = do
 --    let (lit, bright) = Day6.solve $ lines input
 --    putStrLn $ "part1: " ++ show lit ++ " part2: " ++ show bright
       putStrLn "2020"
+      putStrLn "Day1"
       input <- readFile "./inputs/2020/Day1.txt"
       let res1 = show $ AOC.AOC2020.Day1.part1 $ map read $ words input
       let res2 = show $ AOC.AOC2020.Day1.part2 $ map read $ words input
-      putStrLn "Day1"
       putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2
+      putStrLn "Day2"
+      input <- readFile "./inputs/2020/Day2.txt"
+      let res1 = show $ AOC.AOC2020.Day2.part1 $ lines input
+      putStrLn $ "part1: " ++ res1
