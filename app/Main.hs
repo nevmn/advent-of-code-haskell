@@ -9,6 +9,7 @@ import qualified AOC.AOC2015.Day6              as Day6
 
 import AOC.AOC2020.Day1
 import AOC.AOC2020.Day2
+import AOC.AOC2020.Day3
 
 main :: IO ()
 main = do
@@ -52,3 +53,7 @@ main = do
       let res1 = show $ AOC.AOC2020.Day2.part1 $ lines input
       let res2 = show $ AOC.AOC2020.Day2.part2 $ lines input
       putStrLn $ "part1: " ++ res1 ++ " part2: " ++ res2
+      putStrLn "Day3"
+      input <- readFile "./inputs/2020/Day3.txt"
+      let res1 = show $ AOC.AOC2020.Day3.part1 $ lines input
+      putStrLn $ "part1: " ++ res1
